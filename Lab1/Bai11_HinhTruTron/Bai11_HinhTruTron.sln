@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bai11_HinhTruTron", "Bai11_HinhTruTron\Bai11_HinhTruTron.vcxproj", "{8016D96E-722A-44AD-AC9B-626B9E554CAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8016D96E-722A-44AD-AC9B-626B9E554CAE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8016D96E-722A-44AD-AC9B-626B9E554CAE}.Debug|Win32.Build.0 = Debug|Win32
+		{8016D96E-722A-44AD-AC9B-626B9E554CAE}.Release|Win32.ActiveCfg = Release|Win32
+		{8016D96E-722A-44AD-AC9B-626B9E554CAE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

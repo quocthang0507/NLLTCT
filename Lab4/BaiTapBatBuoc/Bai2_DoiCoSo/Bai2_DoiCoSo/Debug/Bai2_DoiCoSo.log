@@ -1,0 +1,15 @@
+﻿Build started 06/08/2017 4:01:52 CH.
+     1>Project "E:\OneDrive\Thắng\HOC TAP\2016 - 2017\BAI TAP HKII\Lab 4\BAI TAP BAT BUOC\Bai2_DoiCoSo\Bai2_DoiCoSo\Bai2_DoiCoSo.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt program.cpp
+         program.cpp
+     1>e:\onedrive\thắng\hoc tap\2016 - 2017\bai tap hkii\lab 4\bai tap bat buoc\bai2_doicoso\bai2_doicoso\thuvien.h(41): warning C4244: 'return' : conversion from 'float' to 'unsigned int', possible loss of data
+     1>e:\onedrive\thắng\hoc tap\2016 - 2017\bai tap hkii\lab 4\bai tap bat buoc\bai2_doicoso\bai2_doicoso\menu.h(35): warning C4101: 'ketQua' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\OneDrive\Thắng\HOC TAP\2016 - 2017\BAI TAP HKII\Lab 4\BAI TAP BAT BUOC\Bai2_DoiCoSo\Debug\Bai2_DoiCoSo.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\OneDrive\Thắng\HOC TAP\2016 - 2017\BAI TAP HKII\Lab 4\BAI TAP BAT BUOC\Bai2_DoiCoSo\Debug\Bai2_DoiCoSo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\OneDrive\Thắng\HOC TAP\2016 - 2017\BAI TAP HKII\Lab 4\BAI TAP BAT BUOC\Bai2_DoiCoSo\Debug\Bai2_DoiCoSo.lib" /MACHINE:X86 Debug\program.obj
+         Bai2_DoiCoSo.vcxproj -> E:\OneDrive\Thắng\HOC TAP\2016 - 2017\BAI TAP HKII\Lab 4\BAI TAP BAT BUOC\Bai2_DoiCoSo\Debug\Bai2_DoiCoSo.exe
+     1>Done Building Project "E:\OneDrive\Thắng\HOC TAP\2016 - 2017\BAI TAP HKII\Lab 4\BAI TAP BAT BUOC\Bai2_DoiCoSo\Bai2_DoiCoSo\Bai2_DoiCoSo.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:19.98
