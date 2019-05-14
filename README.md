@@ -3,8 +3,9 @@ Nguyên lý lập trình cấu trúc
 
 Lưu trữ toàn bộ dự án của môn học Nguyên lý lập trình cấu trúc
 
-Phục vụ cho việc nghiên cứu và học tập
+Phù hợp cho công việc tham khảo và học tập
 
-Mọi cá nhân nào sử dụng lại những source code này, xin vui lòng ghi rõ nguồn
+Đây là bài làm khi mới học C++ nên chắc chắn sẽ có những thiếu sót, hoàn thiện chưa tốt.
+Do đó, nếu tham khảo thì nên cẩn thận khi sử dụng!!!
 
 Xin cảm ơn
