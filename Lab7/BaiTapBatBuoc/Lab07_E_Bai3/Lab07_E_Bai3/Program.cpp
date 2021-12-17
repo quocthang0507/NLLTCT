@@ -17,13 +17,12 @@ int main()
 void ChayChuongTrinh()
 {
 	int menu,
-	soMenu = 6;
+		soMenu = 6;
 	String a;
 	do
 	{
 		system("CLS");
 		menu = ChonMenu(soMenu);
-		XuLyMenu(menu,a);
-	}
-	while (menu > 0);
+		XuLyMenu(menu, a);
+	} while (menu > 0);
 }

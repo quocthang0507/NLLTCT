@@ -67,15 +67,15 @@ void XoaDau_KT(char a[MAX])
 {
 	int i;
 	for (i = 0; a[i] != NULL; i++)
-		a[i] = a[i+1];
-	a[i-1] = NULL;
+		a[i] = a[i + 1];
+	a[i - 1] = NULL;
 }
 
 void XoaCuoi_KT(char a[MAX])
 {
 	int i;
 	for (i = 0; a[i] != NULL; i++);
-		a[i - 1] = NULL;
+	a[i - 1] = NULL;
 }
 
 int XoaKT_VT(char a[MAX], int vt)
@@ -87,16 +87,16 @@ int XoaKT_VT(char a[MAX], int vt)
 		XoaDau_KT(a);
 	}
 	else
-		if (vt == l-1)
+		if (vt == l - 1)
 		{
 			XoaCuoi_KT(a);
 		}
 		else
-			if (0 < vt && vt < l-1)
+			if (0 < vt && vt < l - 1)
 			{
-				for (i=vt;i<l;i++)
-					a[i]=a[i+1];
-				a[l-1]=NULL;
+				for (i = vt; i < l; i++)
+					a[i] = a[i + 1];
+				a[l - 1] = NULL;
 				/*for (i = l-1; i > vt; i--)
 					a[i - 1] = a[i];
 				a[l-1] = NULL;*/
@@ -121,15 +121,15 @@ void CatCuoiChenDau(char a[MAX])
 	int i, l;
 	char x;
 	l = TinhChieuDaiChuoi(a);
-	x = a[l-1];
-	for (i = l-2; i >= 0; i--)
-		a[i+1] = a[i];
+	x = a[l - 1];
+	for (i = l - 2; i >= 0; i--)
+		a[i + 1] = a[i];
 	a[0] = x;
 }
 
 void Xoa_x(char a[MAX], char x)
 {
-	int i, h=0;
+	int i, h = 0;
 	for (i = 0; a[i] != NULL; i++)
 		if (a[i] != x)
 			a[h++] = a[i];

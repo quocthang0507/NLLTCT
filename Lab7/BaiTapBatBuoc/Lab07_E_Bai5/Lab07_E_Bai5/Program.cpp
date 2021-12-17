@@ -18,13 +18,13 @@ int main()
 void ChayChuongTrinh()
 {
 	char thoat;
-	ChuoiSo a;
+	ChuoiKySo a;
 	do
 	{
 		system("CLS");
 		cout << endl << "Nhap vao chuoi so a = ";
-		gets_s(a,MAX);
-		cout << endl << "Chuoi so moi : "; ChuyenDoi(a);
+		gets_s(a, MAX);
+		cout << endl << "Gia tri so moi : " << ChuyenDoi(a);
 		cout << endl << "\nNua khong ? go ESC neu khong\n";
 		thoat = _getch();
 	} while (thoat != 27);

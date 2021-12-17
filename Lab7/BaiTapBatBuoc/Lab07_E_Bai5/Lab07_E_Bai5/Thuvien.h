@@ -1,35 +1,32 @@
 #define MAX 50
 
-typedef char ChuoiSo[MAX];
+typedef char ChuoiKySo[MAX];
+typedef int ChuoiSo[MAX];
 
 int Chuyen_KySo_So(char x)
 {
-	return (int)(x-'0');
+	if ('0' <= x && x <= '9')
+		return (int)(x - '0');
+	return NULL;
 }
 
-void ChuyenDoi(ChuoiSo a)
+long long ChuyenDoi(ChuoiKySo a)
 {
-	int i, j, l=strlen(a);
-	int t[MAX];
-	if (a[0]<a[1])
-		for (i=0;i<l;i++)
-			if (a[i]<=a[i-1])
-			{
-				for (j=l-1;j>i;j--)
-					a[j-1]=a[j];
-				a[l-1]=NULL;
-			}
-	else if (a[0]>a[1])
-		for (i=0;i<l;i++)
-			if (a[i]>=a[i-1])
-			{
-				for (j=l-1;j>i;j--)
-					a[j-1]=a[j];
-				a[l-1]=NULL;
-			}
-	//l=strlen(a);
-	//for (i=0;i<l;i++)
-	//	t[i]=Chuyen_KySo_So(a[i]);
-	//cout << t;
-			cout << a;
+	long long soNguyenDai = 0;
+	int length = strlen(a);
+	for (int i = 0; i < length; i++)
+	{
+		soNguyenDai *= 10;
+		soNguyenDai += Chuyen_KySo_So(a[i]);
+	}
+	return soNguyenDai;
+}
+
+void ChuyenKySoThanhSo(ChuoiKySo a)
+{
+	ChuoiSo t;
+	int i, l = strlen(a);
+	for (i = 0; i < l; i++)
+		t[i] = Chuyen_KySo_So(a[i]);
+	cout << t;
 }
