@@ -27,12 +27,17 @@ void ChayChuongTrinh()
 		cout << endl << "Nhap vao so tu nhien lon n = ";
 		cin >> n;
 		CongSoTuNhienLon(m, n, t);
+
+		int lm = strlen(m), ln = strlen(n), lt = strlen(t);
+		int max = TimMax_3_So(lm, ln, lt);
+
 		cout << endl << "Bai giai : \n";
-		cout << endl << setw(5) << ' ' << setw(17) << m;
-		cout << endl << setw(5) << ' ' << '+' << setw(16) << n;
-		cout << endl << setw(5) << ' ' << "-----------------------";
-		cout << endl << setw(5) << ' ' << '=' << setw(16) << t;
-		cout << endl << "\nNua khong ? go ESC neu khong\n";
+		cout << std::right
+			<< endl << setw(5) << ' ' << "  " << setw(max) << m
+			<< endl << setw(5) << ' ' << "+ " << setw(max) << n
+			<< endl << setw(5) << ' ' << string(max + 3, '_')
+			<< endl << setw(5) << ' ' << "= " << setw(max) << t
+			<< endl << "\nNua khong ? go ESC neu khong\n";
 		thoat = _getch();
 	} while (thoat != 27);
 }
