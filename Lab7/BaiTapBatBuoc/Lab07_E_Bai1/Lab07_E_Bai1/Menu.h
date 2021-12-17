@@ -52,7 +52,7 @@ void XuLyMenu(int menu, String a)
 		system("CLS");
 		cout << "\n1. Nhap chuoi\n";
 		cout << "\nMoi nhap chuoi : ";
-		_flushall();
+		cin.ignore();
 		gets_s(a, MAX);
 		cout << "\nNhan phim bat ky de tiep tuc";
 		break;
