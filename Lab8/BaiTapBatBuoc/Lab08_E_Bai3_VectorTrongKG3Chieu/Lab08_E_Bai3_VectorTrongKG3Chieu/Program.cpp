@@ -17,12 +17,11 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int menu, soMenu=9;
-	Vector u={0,0,0}, v={0,0,0};
+	int menu, soMenu = 9;
+	Vector u = { 0,0,0 }, v = { 0,0,0 };
 	do
 	{
-		menu=ChonMenu(soMenu);
+		menu = ChonMenu(soMenu);
 		XuLyMenu(menu, u, v);
-	}
-	while (menu>0);
+	} while (menu > 0);
 }

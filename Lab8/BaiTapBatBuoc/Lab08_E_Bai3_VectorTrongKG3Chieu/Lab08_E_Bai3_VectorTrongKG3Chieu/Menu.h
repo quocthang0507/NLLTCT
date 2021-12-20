@@ -1,6 +1,6 @@
 void XuatMenu();
 int ChonMenu(int soMenu);
-void XuLyMenu(int menu, Vector &u, Vector &v);
+void XuLyMenu(int menu, Vector& u, Vector& v);
 
 void XuatMenu()
 {
@@ -27,19 +27,19 @@ int ChonMenu(int soMenu)
 		XuatMenu();
 		cout << "\nNhap 1 so trong khoang [0,...," << soMenu << "] de chon chuc nang, stt = ";
 		cin >> stt;
-		if (0<=stt && stt <=soMenu)
+		if (0 <= stt && stt <= soMenu)
 			break;
 	}
 	return stt;
 }
 
-void XuLyMenu(int menu, Vector &u, Vector &v)
+void XuLyMenu(int menu, Vector& u, Vector& v)
 {
 	int kq_KT; //Biến dùng để kiểm tra đúng sai
 	double kq_TT; //Biến dùng để lưu kết quả tính toán
 	double k;
 	Vector kq;
-	switch(menu)
+	switch (menu)
 	{
 	case 0:
 		system("CLS");
@@ -49,9 +49,9 @@ void XuLyMenu(int menu, Vector &u, Vector &v)
 		system("CLS");
 		cout << "\n1. Nhap 2 vector\n";
 		cout << "\nNhap toa do vector u : \n";
-		u=NhapVector();
+		u = NhapVector();
 		cout << "\nNhap toa do vector v : \n";
-		v=NhapVector();
+		v = NhapVector();
 		system("CLS");
 		cout << "\nHai vector da nhap : \n";
 		cout << "\nVector u = ";
@@ -70,12 +70,12 @@ void XuLyMenu(int menu, Vector &u, Vector &v)
 	case 3:
 		system("CLS");
 		cout << "\n3. Tinh do dai vector\n";
-		kq_TT=DoDaiVector(u);
+		kq_TT = DoDaiVector(u);
 		cout << "\nVector u = ";
 		XuatVector(u);
 		cout << "\nDo dai vector u = " << kq_TT;
 		cout << endl;
-		kq_TT=DoDaiVector(v);
+		kq_TT = DoDaiVector(v);
 		cout << "\nVector v = ";
 		XuatVector(v);
 		cout << "\nDo dai vector v = " << kq_TT;
@@ -100,7 +100,7 @@ void XuLyMenu(int menu, Vector &u, Vector &v)
 		XuatVector(u);
 		cout << "\nVector v = ";
 		XuatVector(v);
-		kq=Tong(u,v);
+		kq = Tong(u, v);
 		cout << "\nTong 2 vector = ";
 		XuatVector(kq);
 		break;
@@ -111,7 +111,7 @@ void XuLyMenu(int menu, Vector &u, Vector &v)
 		XuatVector(u);
 		cout << "\nVector v = ";
 		XuatVector(v);
-		kq=Hieu(u,v);
+		kq = Hieu(u, v);
 		cout << "\nHieu 2 vector = ";
 		XuatVector(kq);
 		break;
@@ -122,13 +122,13 @@ void XuLyMenu(int menu, Vector &u, Vector &v)
 		cin >> k;
 		cout << "\nVector u = ";
 		XuatVector(u);
-		kq=Tich_k(u,k);
+		kq = Tich_k(u, k);
 		cout << "\nk . vector u = ";
 		XuatVector(kq);
 		cout << endl;
 		cout << "\nVector v = ";
 		XuatVector(v);
-		kq=Tich_k(v,k);
+		kq = Tich_k(v, k);
 		cout << "\nk . vector v = ";
 		XuatVector(kq);
 		break;
@@ -139,7 +139,7 @@ void XuLyMenu(int menu, Vector &u, Vector &v)
 		XuatVector(u);
 		cout << "\nVector v = ";
 		XuatVector(v);
-		kq_TT=TichVoHuong(u,v);
+		kq_TT = TichVoHuong(u, v);
 		cout << "\nKet qua tich vo huong = " << kq_TT;
 		break;
 	case 9:
@@ -149,8 +149,8 @@ void XuLyMenu(int menu, Vector &u, Vector &v)
 		XuatVector(u);
 		cout << "\nVector v = ";
 		XuatVector(v);
-		kq_KT=KT_VuongGoc(u,v);
-		if (kq_KT==0)
+		kq_KT = KT_VuongGoc(u, v);
+		if (kq_KT == 0)
 			cout << "\nHai vector u va v khong vuong goc voi nhau";
 		else cout << "\nHai vector u va v vuong goc voi nhau";
 		break;

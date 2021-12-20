@@ -18,8 +18,8 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int menu, soMenu=6, n=8;
-	ThueBao a[MAX]=
+	int menu, soMenu = 6, n = 8;
+	ThueBao a[MAX] =
 	{
 		{100579,"Nguyen Quoc","Binh","Da Lat","051.3432157",{1,3,2007}},
 		{100821,"Tran Dinh","Quy","Da Lat","051.2650120",{1,5,2010}},
@@ -32,8 +32,7 @@ void ChayChuongTrinh()
 	};
 	do
 	{
-		menu=ChonMenu(soMenu);
-		XuLyMenu(menu,a,n);
-	}
-	while (menu>0);
+		menu = ChonMenu(soMenu);
+		XuLyMenu(menu, a, n);
+	} while (menu > 0);
 }
