@@ -1,6 +1,6 @@
 void XuatMenu();
 int ChonMenu(int soMenu);
-void XuLyMenu(int menu, BangDiemSV a[MAX], int& n);
+void XuLyMenu(int menu, SinhVien a[MAX], int& n);
 
 void XuatMenu()
 {
@@ -36,7 +36,7 @@ int ChonMenu(int soMenu)
 	return stt;
 }
 
-void XuLyMenu(int menu, BangDiemSV a[MAX], int& n)
+void XuLyMenu(int menu, SinhVien a[MAX], int& n)
 {
 	char HoTen[25];
 	switch (menu)
@@ -67,7 +67,9 @@ void XuLyMenu(int menu, BangDiemSV a[MAX], int& n)
 	case 4:
 		system("CLS");
 		cout << "\n4. Xuat bang diem sinh vien theo tung lop\n";
-		XuatDS_Lop(a, n);
+		//XuatDS_Lop(a, n);
+		SapXepTheoLop(a, n);
+		XuatDS_Lop_v2(a, n);
 		break;
 	case 5:
 		system("CLS");
@@ -91,7 +93,7 @@ void XuLyMenu(int menu, BangDiemSV a[MAX], int& n)
 		system("CLS");
 		cout << "\n7. Tim va xuat thong tin cua sinh vien co ten cho truoc\n";
 		cout << "\nNhap ten can tim : ";
-		cin >> HoTen;
+		gets_s(HoTen, 26);
 		XuatDS_TheoTen(a, n, HoTen);
 		break;
 	case 8:

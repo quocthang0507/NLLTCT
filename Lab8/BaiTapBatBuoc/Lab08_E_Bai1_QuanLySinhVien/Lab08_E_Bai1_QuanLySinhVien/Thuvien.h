@@ -1,16 +1,18 @@
-#define MAX 100
+﻿#define MAX 100
 #define NGANGDOI '='
 #define NGANGDON '-'
 
-struct BangDiemSV
+struct SinhVien
 {
 	char MaSV[8];
-	char HoTen[25];
-	unsigned int NamSinh;
-	char Lop[10];
+	char HoTen[26];
+	unsigned NamSinh;
+	char Lop[11];
 	double DiemTB;
-	char XepLoai[5];
+	char XepLoai[6];
 };
+
+typedef SinhVien Lop[MAX];
 
 void XuatKeNgangDon()
 {
@@ -23,23 +25,23 @@ void XuatKeNgangDon()
 	cout << ':';
 }
 
-void Nhap1SV(BangDiemSV& p)
+void Nhap1SV(SinhVien& p)
 {
 	cout << "\nNhap ma sinh vien (toi da 7 ky tu) : ";
 	gets_s(p.MaSV, 8);
 	cout << "\nNhap ho va ten : ";
-	gets_s(p.HoTen, 25);
+	gets_s(p.HoTen, 26);
 	cout << "\nNhap nam sinh : ";
 	cin >> p.NamSinh;
 	cin.ignore();
 	cout << "\nNhap lop : ";
-	gets_s(p.Lop, 10);
+	gets_s(p.Lop, 11);
 	cout << "\nNhap diem trung binh : ";
 	cin >> p.DiemTB;
 	cin.ignore();
 }
 
-void NhapDS(BangDiemSV a[MAX], int& n)
+void NhapDS(SinhVien a[MAX], int& n)
 {
 	int i;
 	cout << "\nNhap so luong sinh vien n = ";
@@ -83,7 +85,7 @@ void XuatTieuDe()
 		<< ':';
 	XuatKeNgang();
 }
-void Xuat1SV(BangDiemSV p)
+void Xuat1SV(SinhVien p)
 {
 	cout << setiosflags(ios::left)
 		<< ':'
@@ -101,7 +103,7 @@ void Xuat1SV(BangDiemSV p)
 		<< ':';
 }
 
-void Xuat1SV_DD(BangDiemSV p)
+void Xuat1SV_DD(SinhVien p)
 {
 	cout << setiosflags(ios::left)
 		<< ':'
@@ -119,7 +121,7 @@ void Xuat1SV_DD(BangDiemSV p)
 		<< ':';
 }
 
-void XuatDS(BangDiemSV a[MAX], int n)
+void XuatDS(SinhVien a[MAX], int n)
 {
 	int i;
 	XuatTieuDe();
@@ -133,7 +135,7 @@ void XuatDS(BangDiemSV a[MAX], int n)
 	XuatKeNgang();
 }
 
-void XuatDS_DD(BangDiemSV a[MAX], int n)
+void XuatDS_DD(SinhVien a[MAX], int n)
 {
 	int i;
 	XuatTieuDe();
@@ -147,10 +149,10 @@ void XuatDS_DD(BangDiemSV a[MAX], int n)
 	XuatKeNgang();
 }
 
-void XuatDS_Lop(BangDiemSV a[MAX], int n)
+void XuatDS_Lop(SinhVien a[MAX], int n)
 {
 	int i, j, dau, m = 0, dem = 0;
-	BangDiemSV b[MAX];
+	SinhVien b[MAX];
 	int vt[MAX];
 	for (i = 0; i < n; i++)
 	{
@@ -182,15 +184,15 @@ void XuatDS_Lop(BangDiemSV a[MAX], int n)
 	XuatKeNgang();
 }
 
-void HoanVi(BangDiemSV& p, BangDiemSV& q)
+void HoanVi(SinhVien& p, SinhVien& q)
 {
-	BangDiemSV t;
+	SinhVien t;
 	t = p;
 	p = q;
 	q = t;
 }
 
-void SapXep_DiemTB_Giam(BangDiemSV a[MAX], int n)
+void SapXep_DiemTB_Giam(SinhVien a[MAX], int n)
 {
 	int i, j;
 	for (i = 0; i < n - 1; i++)
@@ -199,7 +201,7 @@ void SapXep_DiemTB_Giam(BangDiemSV a[MAX], int n)
 				HoanVi(a[i], a[j]);
 }
 
-void SapXep_Ten_Tang_MaSV_Tang(BangDiemSV a[MAX], int n)
+void SapXep_Ten_Tang_MaSV_Tang(SinhVien a[MAX], int n)
 {
 	int i, j;
 	for (i = 0; i < n - 1; i++)
@@ -213,7 +215,7 @@ void SapXep_Ten_Tang_MaSV_Tang(BangDiemSV a[MAX], int n)
 					HoanVi(a[i], a[j]);
 }
 
-void XuatDS_TheoTen(BangDiemSV a[MAX], int n, char HoTen[25])
+void XuatDS_TheoTen(SinhVien a[MAX], int n, char HoTen[26])
 {
 	int i, dem = 0;
 	for (i = 0; i < n; i++)
@@ -235,7 +237,7 @@ void XuatDS_TheoTen(BangDiemSV a[MAX], int n, char HoTen[25])
 	}
 }
 
-void XuatDS_DiemTB_CaoNhat(BangDiemSV a[MAX], int n)
+void XuatDS_DiemTB_CaoNhat(SinhVien a[MAX], int n)
 {
 	int i, dem = 0;
 	double max = a[0].DiemTB;
@@ -256,20 +258,48 @@ void XuatDS_DiemTB_CaoNhat(BangDiemSV a[MAX], int n)
 	XuatKeNgang();
 }
 
-void XepLoaiHocLuc(BangDiemSV a[MAX], int n)
+void XepLoaiHocLuc(SinhVien a[MAX], int n)
 {
 	int i;
 	for (i = 0; i < n; i++)
 	{
 		if (a[i].DiemTB <= 10 && a[i].DiemTB >= 8.5)
 			strcpy_s(a[i].XepLoai, "Gioi");
-		if (a[i].DiemTB < 8.5 && a[i].DiemTB >= 7)
+		else if (a[i].DiemTB < 8.5 && a[i].DiemTB >= 7)
 			strcpy_s(a[i].XepLoai, "Kha");
-		if (a[i].DiemTB < 7 && a[i].DiemTB >= 5.5)
+		else if (a[i].DiemTB < 7 && a[i].DiemTB >= 5.5)
 			strcpy_s(a[i].XepLoai, "TB");
-		if (a[i].DiemTB < 5.5 && a[i].DiemTB >= 4)
+		else if (a[i].DiemTB < 5.5 && a[i].DiemTB >= 4)
 			strcpy_s(a[i].XepLoai, "Yeu");
-		if (a[i].DiemTB < 4 && a[i].DiemTB >= 0)
+		else
 			strcpy_s(a[i].XepLoai, "Kem");
 	}
+}
+
+void SapXepTheoLop(Lop a, int n)
+{
+	for (int i = 0; i < n - 1; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (strcmp(a[i].Lop, a[j].Lop) > 0)
+				HoanVi(a[i], a[j]);
+		}
+	}
+}
+
+void XuatDS_Lop_v2(Lop a, int n)
+{
+	int i;
+	XuatTieuDe();
+	for (i = 0; i < n - 1; i++)
+	{
+		cout << endl;
+		Xuat1SV(*(a + i)); //a[i]
+		if (strcmp(a[i].Lop, a[i + 1].Lop) != 0)
+			XuatKeNgangDon();
+	}
+	cout << endl;
+	Xuat1SV(a[n - 1]);
+	XuatKeNgang();
 }
