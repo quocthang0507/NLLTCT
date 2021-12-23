@@ -22,7 +22,11 @@ void ChayChuongTrinh()
 	int n;
 	cout << "Nhap ten tap tin: ";
 	cin >> filename;
-	Read_Array(filename, a, n);
-	cout << "\nMang da doc tu tap tin:\n";
-	XuatMang(a, n);
+	if (Read_Array(filename, a, n))
+	{
+		cout << "\nMang da doc tu tap tin:\n";
+		XuatMang(a, n);
+	}
+	else
+		cout << "\nLoi khi doc mang mot chieu tu tap tin!";
 }

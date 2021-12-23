@@ -24,7 +24,11 @@ void ChayChuongTrinh()
 	cout << "Nhap ten tap tin de ghi: ";
 	cin >> filename;
 	NhapTuDong(a, n, 0, 9);
-	Ghi_MaTran(filename, a, n);
-	cout << "\nMa tran doc tu tap tin: \n";
-	Xuat_MaTran(filename);
+	if (Ghi_MaTran(filename, a, n))
+	{
+		cout << "\nMa tran doc tu tap tin: \n";
+		Xuat_MaTran(filename);
+	}
+	else
+		cout << "\nLoi khi ghi ma tran vao tap tin!";
 }

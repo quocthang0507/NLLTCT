@@ -23,6 +23,8 @@ void ChayChuongTrinh()
 	int n;
 	cout << "\nNhap ten tap tin de mo: ";
 	cin >> filename;
-	Read_Matrix(filename, a, n);
-	XuatMaTran(a, n);
+	if (Read_Matrix(filename, a, n))
+		XuatMaTran(a, n);
+	else
+		cout << "\nLoi khi doc ma tran tu tap tin!";
 }

@@ -25,8 +25,11 @@ void ChayChuongTrinh()
 	cin >> filename;
 	NhapTuDong(a, n, 1, 10);
 	int kq = Write_Array(a, n, filename);
-	if (!kq)
-		return;
-	cout << "\nMang da doc tu tap tin: \n";
-	Read_Array(filename);
+	if (kq)
+	{
+		cout << "\nMang da doc tu tap tin: \n";
+		Read_Array(filename);
+	}
+	else
+		cout << "\nLoi khi xuat mang vao tap tin!";
 }
