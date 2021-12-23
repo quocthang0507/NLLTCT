@@ -8,7 +8,7 @@ void File_Array(char* filename, int a[MAX], int& n)
 	ifstream in(filename);
 	if (!in)
 	{
-		cout << "\nLoi mo file!";
+		cout << "\nLoi mo tap tin!";
 		return;
 	}
 	in >> n;
