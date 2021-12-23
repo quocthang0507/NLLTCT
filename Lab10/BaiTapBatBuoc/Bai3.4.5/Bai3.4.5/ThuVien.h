@@ -40,7 +40,7 @@ void DaoNguocChuoi(Chuoi s, int i = 0)
 
 void NhapDaySo_TD(DaySo a, int& n, int min, int max)
 {
-	srand((unsigned)1);
+	srand(time(NULL));
 	do
 	{
 		cout << "\nNhap kich thuoc day so n = ";
