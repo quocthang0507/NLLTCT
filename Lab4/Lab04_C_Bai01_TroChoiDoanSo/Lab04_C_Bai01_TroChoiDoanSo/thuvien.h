@@ -20,7 +20,7 @@ int ChonMucDoan()
 int SinhSoNgauNhien()
 {
 	int soDe;
-	srand((unsigned int)time(0));
+	srand((unsigned int)time(NULL));
 	soDe = rand()/MAX;
 	return soDe;
 }

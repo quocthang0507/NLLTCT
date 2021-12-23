@@ -13,7 +13,7 @@ void XuatDaySo_Doan(DaySo a, int l, int r);
 
 void NhapTuDong(DaySo a, int n, int min, int max)
 {
-	srand((unsigned)NULL);
+	srand((unsigned)time(NULL));
 	for (int i = 0; i < n; i++)
 	{
 		*(a + i) = min + rand() % (max - min + 1);

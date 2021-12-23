@@ -8,7 +8,7 @@ void NhapTuDong(DaySo a, int &n)
 	int i;
 	cout << endl << "Nhap kich thuoc mang : ";
 	cin >> n;
-	srand((unsigned) time(0));
+	srand((unsigned) time(NULL));
 	for (i = 0; i<n; i++)
 		a[i] = -20+rand() %41;
 }

@@ -12,7 +12,7 @@ void LietKe_HoanVi(DaySo a, int n, int k);
 
 void NhapTuDong(DaySo a, int n, int min, int max)
 {
-	srand((unsigned)NULL);
+	srand((unsigned)time(NULL));
 	for (int i = 0; i < n; i++)
 	{
 		*(a + i) = min + rand() % (max - min + 1);
@@ -25,7 +25,7 @@ void NhapDayPhanBiet(DaySo a, int n)
 	{
 		*(a + i) = i + 1;
 	}
-	srand((unsigned)NULL);
+	srand((unsigned)time(NULL));
 	for (int i = 0; i < n - 1; i++)
 	{
 		int vt = i + rand() % (MAX - i);
