@@ -17,13 +17,12 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int menu, soMenu=9, n=0;
+	int menu, soMenu = 9, n = 0;
 	ChuoiDong s;
-	s=new char [MAX];
+	s = new char[MAX];
 	do
 	{
-		menu=ChonMenu(soMenu);
-		XuLyMenu(menu,s);
-	}
-	while (menu>0);
+		menu = ChonMenu(soMenu);
+		XuLyMenu(menu, s);
+	} while (menu > 0);
 }

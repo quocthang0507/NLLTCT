@@ -18,13 +18,12 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int menu, n=0, soMenu=6;
+	int menu, n = 0, soMenu = 6;
 	DayDong a;
-	a=new int [100];
+	a = new int[100];
 	do
 	{
-		menu=ChonMenu(soMenu);
+		menu = ChonMenu(soMenu);
 		XuLyMenu(menu, a, n);
-	}
-	while (menu>0);
+	} while (menu > 0);
 }

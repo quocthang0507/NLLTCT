@@ -21,21 +21,21 @@ int ChonMenu(int soMenu)
 		XuatMenu();
 		cout << "\nNhap 1 so trong khoang tu [0,...," << soMenu << "] de chon chuc nang, stt = ";
 		cin >> stt;
-		if (0<=stt && stt<=soMenu)
+		if (0 <= stt && stt <= soMenu)
 			break;
 	}
 	return stt;
 }
 
-void XuLyMenu(int menu, MaTranVuong a, int &n)
+void XuLyMenu(int menu, MaTranVuong a, int& n)
 {
 	int t;
-	switch(menu)
+	switch (menu)
 	{
 	case 0:
 		system("CLS");
 		cout << "\n0. Thoat khoi chuong trinh\n";
-		delete []a;
+		delete[]a;
 		break;
 	case 1:
 		system("CLS");
@@ -46,25 +46,24 @@ void XuLyMenu(int menu, MaTranVuong a, int &n)
 		{
 			cout << "\nBan muon nhap ma tran tu dong khong? Go 1 de DONG Y, 0 de TU NHAP : ";
 			cin >> t;
-		}
-		while (t!=0 && t!=1);
-		if (t==0)
-			NhapMaTran(a,n);
-		else NhapMaTranTD(a,n);
+		} while (t != 0 && t != 1);
+		if (t == 0)
+			NhapMaTran(a, n);
+		else NhapMaTranTD(a, n);
 		cout << "\nMa tran da nhap : ";
-		XuatMaTran(a,n);
+		XuatMaTran(a, n);
 		break;
 	case 2:
 		system("CLS");
 		cout << "\n2. Xem ma tran\n";
-		XuatMaTran(a,n);
+		XuatMaTran(a, n);
 		break;
 	case 3:
 		system("CLS");
 		cout << "\n3. Kiem tra ma tran co phai la doi xung\n";
 		cout << "\nXem lai ma tran : ";
-		XuatMaTran(a,n);
-		if (KT_DoiXung(a,n))
+		XuatMaTran(a, n);
+		if (KT_DoiXung(a, n))
 			cout << "\nDay la ma tran doi xung!";
 		else cout << "\nDay khong phai la ma tran doi xung!";
 		break;
@@ -72,8 +71,8 @@ void XuLyMenu(int menu, MaTranVuong a, int &n)
 		system("CLS");
 		cout << "\n4. Kiem tra ma tran co phai la tam giac tren\n";
 		cout << "\nXem lai ma tran : ";
-		XuatMaTran(a,n);
-		if (KT_TamGiacTren(a,n))
+		XuatMaTran(a, n);
+		if (KT_TamGiacTren(a, n))
 			cout << "\nDay la ma tran tam giac tren!";
 		else cout << "\nDay khong phai la ma tran tam giac tren!";
 		break;
@@ -81,8 +80,8 @@ void XuLyMenu(int menu, MaTranVuong a, int &n)
 		system("CLS");
 		cout << "\n5. Kiem tra ma tran co phai la tam giac duoi\n";
 		cout << "\nXem lai ma tran : ";
-		XuatMaTran(a,n);
-		if (KT_TamGiacDuoi(a,n))
+		XuatMaTran(a, n);
+		if (KT_TamGiacDuoi(a, n))
 			cout << "\nDay la ma tran tam giac duoi!";
 		else cout << "\nDay khong phai la ma tran tam giac duoi!";
 		break;
@@ -90,8 +89,8 @@ void XuLyMenu(int menu, MaTranVuong a, int &n)
 		system("CLS");
 		cout << "\n6. Kiem tra ma tran co phai la tam giac cheo\n";
 		cout << "\nXem lai ma tran : ";
-		XuatMaTran(a,n);
-		if (KT_TamGiacCheo(a,n))
+		XuatMaTran(a, n);
+		if (KT_TamGiacCheo(a, n))
 			cout << "\nDay la ma tran tam giac cheo!";
 		else cout << "\nDay khong phai la ma tran tam giac cheo!";
 		break;
@@ -99,8 +98,8 @@ void XuLyMenu(int menu, MaTranVuong a, int &n)
 		system("CLS");
 		cout << "\n7. Kiem tra ma tran co phai la tam giac don vi\n";
 		cout << "\nXem lai ma tran : ";
-		XuatMaTran(a,n);
-		if (KT_TamGiacDonVi(a,n))
+		XuatMaTran(a, n);
+		if (KT_TamGiacDonVi(a, n))
 			cout << "\nDay la ma tran tam giac don vi!";
 		else cout << "\nDay khong phai la ma tran tam giac don vi!";
 		break;
