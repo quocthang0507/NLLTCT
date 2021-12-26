@@ -25,7 +25,7 @@ int ChonMenu(int soMenu)
 		XuatMenu();
 		cout << "\nChon 1 so trong khoang tu [0,...," << soMenu << "] de chon chuc nang, stt = ";
 		cin >> stt;
-		if (0<=stt && stt<=soMenu)
+		if (0 <= stt && stt <= soMenu)
 			break;
 	}
 	return stt;
@@ -35,19 +35,19 @@ void XuLyMenu(int menu, ChuoiDong a)
 {
 	int kq, vt;
 	char x;
-	switch(menu)
+	switch (menu)
 	{
 	case 0:
 		system("CLS");
 		cout << "\n0. Thoat khoi chuong trinh\n";
-		delete []a;
+		delete[]a;
 		break;
 	case 1:
 		system("CLS");
 		cout << "\n1. Nhap chuoi\n";
 		cout << "\nNhap vao chuoi : ";
 		_flushall();
-		gets_s(a,MAX);
+		gets_s(a, MAX);
 		cout << "\nChuoi da nhap : " << a;
 		break;
 	case 2:
@@ -59,7 +59,7 @@ void XuLyMenu(int menu, ChuoiDong a)
 		system("CLS");
 		cout << "\n3. Tinh chieu dai chuoi\n";
 		cout << "\nXem lai chuoi : " << a << endl;
-		kq=TinhChieuDaiChuoi(a);
+		kq = TinhChieuDaiChuoi(a);
 		cout << "\nChieu dai cua chuoi tren la : " << kq;
 		break;
 	case 4:
@@ -69,8 +69,8 @@ void XuLyMenu(int menu, ChuoiDong a)
 		cin >> x;
 		cout << "\nNhap vi tri can chen : ";
 		cin >> vt;
-		kq=ChenKT_VT(a,x,vt);
-		if (kq!=0)
+		kq = ChenKT_VT(a, x, vt);
+		if (kq != 0)
 			cout << "\nChuoi sau khi chen : " << a;
 		else cout << "\nVi tri can chen khong hop le";
 		break;
@@ -79,8 +79,8 @@ void XuLyMenu(int menu, ChuoiDong a)
 		cout << "\n5. Xoa ky tu tai vi tri cho truoc\n";
 		cout << "\nNhap vi tri can xoa : ";
 		cin >> vt;
-		kq=XoaKT_VT(a,vt);
-		if (kq!=0)
+		kq = XoaKT_VT(a, vt);
+		if (kq != 0)
 			cout << "\nChuoi sau khi xoa : " << a;
 		else cout << "\nVi tri can xoa khong hop le";
 		break;
@@ -97,7 +97,7 @@ void XuLyMenu(int menu, ChuoiDong a)
 		cout << "\nNhap ky tu x can xoa : ";
 		cin >> x;
 		cout << "\nChuoi ban dau : " << a;
-		Xoa_x(a,x);
+		Xoa_x(a, x);
 		cout << "\nChuoi sau khi xoa ky tu '" << x << "' : " << a;
 		break;
 	}

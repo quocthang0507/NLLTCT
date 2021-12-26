@@ -18,11 +18,10 @@ void ChayChuongTrinh()
 {
 	int soMenu = 7, menu;
 	ChuoiDong a;
-	a=new char [MAX];
+	a = new char[MAX];
 	do
 	{
-		menu=ChonMenu(soMenu);
+		menu = ChonMenu(soMenu);
 		XuLyMenu(menu, a);
-	}
-	while (menu>0);
+	} while (menu > 0);
 }

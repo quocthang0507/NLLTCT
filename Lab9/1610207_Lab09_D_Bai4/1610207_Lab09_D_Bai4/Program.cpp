@@ -18,14 +18,13 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int soMenu=6, menu, n=0;
-	SinhVien *a;
-	a=new SinhVien[MAX];
+	int soMenu = 6, menu, n = 0;
+	SinhVien* a;
+	a = new SinhVien[MAX];
 	do
 	{
 		system("CLS");
-		menu=ChonMenu(soMenu);
+		menu = ChonMenu(soMenu);
 		XuLyMenu(menu, a, n);
-	}
-	while (menu>0);
+	} while (menu > 0);
 }

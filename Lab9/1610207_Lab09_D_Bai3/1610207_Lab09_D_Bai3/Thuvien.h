@@ -1,6 +1,6 @@
 #define MAX 100
 
-typedef char *ChuoiDong;
+typedef char* ChuoiDong;
 
 int TinhChieuDaiChuoi(ChuoiDong a);
 int ChenKT_VT(ChuoiDong a, char x, int vt);
@@ -11,7 +11,7 @@ void Xoa_x(ChuoiDong a, char x);
 int TinhChieuDaiChuoi(ChuoiDong a)
 {
 	int i = 0;
-	while (*(a+i) !=NULL)
+	while (*(a + i) != NULL)
 		i++;
 	return i;
 }
