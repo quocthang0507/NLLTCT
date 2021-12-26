@@ -7,7 +7,7 @@ void NhapTuDong(DayDong a, int n)
 	int i;
 	srand((unsigned)time(NULL));
 	for (i = 0; i < n; i++)
-		*(a + i) = -20 + rand() % 40;
+		*(a + i) = -20 + rand() % 41; //[-20;20]
 }
 
 void XuatMang(DayDong a, int n)
@@ -21,27 +21,25 @@ void XuatMang(DayDong a, int n)
 
 int TimMax(DayDong a, int n)
 {
-	int kq;
+	int max;
 	if (n == 1)
-		kq = *(a + 0);
-	else
-		if (n > 1)
-			if (TimMax(a, n - 1) < *(a + n - 1))
-				kq = *(a + n - 1);
-			else
-				kq = TimMax(a, n - 1);
-	return kq;
+		max = *(a + 0);
+	else if (n > 1)
+		if (TimMax(a, n - 1) < *(a + n - 1))
+			max = *(a + n - 1);
+		else
+			max = TimMax(a, n - 1);
+	return max;
 }
 
 int TinhTong(DayDong a, int n)
 {
-	int kq;
+	int tong;
 	if (n == 1)
-		kq = *(a + 0);
-	else
-		if (n > 1)
-			kq = TinhTong(a, n - 1) + *(a + n - 1);
-	return kq;
+		tong = *(a + 0);
+	else if (n > 1)
+		tong = TinhTong(a, n - 1) + *(a + n - 1);
+	return tong;
 }
 
 int TinhSoDC(DayDong a, int n)
@@ -60,16 +58,31 @@ int TinhSoDC(DayDong a, int n)
 
 int DemX(DayDong a, int x, int n)
 {
-	int kq;
+	int dem = 0;
 	if (n == 1)
 		if (*a == x)
-			kq = 1;
-		else kq = 0;
+			dem = 1;
+		else dem = 0;
+	else if (n > 1)
+		if (*(a + n - 1) == x)
+			dem = DemX(a, x, n - 1) + 1;
+		else
+			dem = DemX(a, x, n - 1);
+	return dem;
+}
+
+int DemSoDuong(DayDong a, int n)
+{
+	int dem;
+	if (n == 1)
+		if (*a > 0)
+			dem = 1;
+		else
+			dem = 0;
 	else
-		if (n > 1)
-			if (*(a + n - 1) == x)
-				kq = DemX(a, x, n - 1) + 1;
-			else
-				kq = DemX(a, x, n - 1);
-	return kq;
+		if (*(a + n - 1) > 0)
+			dem = 1 + DemSoDuong(a, n - 1);
+		else
+			dem = DemSoDuong(a, n - 1);
+	return dem;
 }

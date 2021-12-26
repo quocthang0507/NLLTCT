@@ -12,6 +12,7 @@ void XuatMenu()
 	cout << "\n4. Tinh tong cac phan tu cua mang";
 	cout << "\n5. Dem so luong cac duong chay trong day";
 	cout << "\n6. Dem so lan xuat hien cua x trong day";
+	cout << "\n7. Dem so duong xuat hien trong day";
 	cout << "\n========================================================================";
 }
 
@@ -95,6 +96,14 @@ void XuLyMenu(int menu, DayDong a, int& n)
 			cout << "\n\nNhap nua khong, nhan ESC neu muon thoat khoi menu 6!";
 			thoat = _getch();
 		} while (thoat != 27);
+		break;
+	case 7:
+		system("CLS");
+		cout << "\n7. 7. Dem so duong xuat hien trong day\n";
+		cout << "\nXem lai day : \n";
+		XuatMang(a, n);
+		kq = DemSoDuong(a, n);
+		cout << "\nSo luong so duong trong day tren la : " << kq;
 		break;
 	}
 	_getch();

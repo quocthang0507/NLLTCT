@@ -18,7 +18,7 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int menu, n = 0, soMenu = 6;
+	int menu, n = 0, soMenu = 7;
 	DayDong a;
 	a = new int[100];
 	do
