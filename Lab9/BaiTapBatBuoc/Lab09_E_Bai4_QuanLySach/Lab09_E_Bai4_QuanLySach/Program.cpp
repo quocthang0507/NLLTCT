@@ -17,13 +17,12 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int menu, soMenu=9, n=0;
-	TaiLieu *a;
-	a=new TaiLieu[MAX];
+	int menu, soMenu = 9, n = 0;
+	TaiLieu* a;
+	a = new TaiLieu[MAX];
 	do
 	{
-		menu=ChonMenu(soMenu);
-		XuLyMenu(menu,a,n);
-	}
-	while (menu>0);
+		menu = ChonMenu(soMenu);
+		XuLyMenu(menu, a, n);
+	} while (menu > 0);
 }
